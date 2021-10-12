@@ -1,0 +1,57 @@
+.task-list__item{
+    display: none;
+}
+.task-list__active{
+    display: block;
+}
+
+.preloader {
+    text-align: center;
+}
+.uk-alert-success{
+    width: 120px;
+    height: 25px;
+    margin: 0 auto;
+    text-align: center;
+    top: 50%;
+    font-size: 18px;
+    border-radius: 5%;
+}
+
+.inactive {
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+}
+
+.hover {
+    display: none;
+}
+.card span {
+    top: 15%;
+    right: 1%;
+}
+
+.timer {
+    display: flex;
+    flex-direction: row;
+}
+.timer__block {
+    margin: 2px;
+    font-family: 'Yaldevi', sans-serif;
+}
+.uk-card {
+    box-shadow: 0 0 2px #000;
+}
+.ext-card {
+    width: 50vw;
+    height: 180px;
+    border: 1px solid black;
+    box-shadow: 0 0 2px #000000;
+    position: relative;
+    margin: 0 5px 0 10px;
+    padding: 0 20px;
+    background: #1e87f0;
+    color: white;
+}
+
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yaldevi:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/uikit.min.css" />
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="css/promotion.scss"/>
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<header class="navbar-list">
+    <nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+                <li class="uk-active navbar-item">
+                    <a href="#">Список задач</a>
+                    <div class="uk-navbar-dropdown">
+                        <ul>
+                            <li class="uk-active">Активные задачи <a href=""></a></li>
+                            <li class="uk-parent">Завершенные задачи <a href=""></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="navbar-item"><a href="#"> Создать новую задачу</a></li>
+                <li class="navbar-item"><a href="#"> Экстремальная задача</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<body>
+<div class="task-list__item">
+
+    <div class="main-container uk-child-width-1-2@s uk-grid-match" uk-grid>
+
+    </div>
+</div>
+
+<div class="task-list__item">
+    <form action="#">
+        <fieldset class="uk-fieldset">
+
+            <legend class="uk-legend">Создать новую задачу</legend>
+
+            <div class="uk-margin">
+                <input class="uk-input input-title" type="text" name="title" placeholder="Название">
+            </div>
+
+
+            <div class="uk-margin">
+                <textarea class="uk-textarea input-description" type="text" name="description" rows="5" placeholder="Описание"></textarea>
+            </div>
+
+            <div class="uk-margin">
+                <span>Важная задача</span>
+                <input type="checkbox" name="important">
+            </div>
+
+            <button class="uk-button uk-button-primary button-submit">Отправить</button>
+        </fieldset>
+    </form>
+</div>
+
+
+<div class="task-list__item">
+    <form action="#">
+        <fieldset class="uk-fieldset">
+
+            <legend class="uk-legend">Создать экстремальную задачу</legend>
+
+            <div class="uk-margin">
+                <input class="uk-input input-title" type="text" name="title" placeholder="Название">
+            </div>
+
+
+            <div class="uk-margin">
+                <textarea class="uk-textarea input-description" type="text" name="description" rows="5" placeholder="Описание"></textarea>
+            </div>
+            <div>
+                <div>
+                    <input type="date" name="date">
+                </div>
+            </div>
+            <div class="uk-margin">
+                <span>Важная задача</span>
+                <input type="checkbox" name="important">
+            </div>
+
+            <button class="uk-button uk-button-primary button-submit">Отправить</button>
+        </fieldset>
+    </form>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
