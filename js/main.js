@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log(data)
             })
     }
-//а ты меня заебал дядя
+
     const deletePost = async url => {
         const res = await fetch(url, {
             method: 'DELETE'
@@ -279,6 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setInterval(() => setColor(card), 1000)
         }
     }
+/*
     const testFunction = function () {
         getResource('http://localhost:3000/exposts')
             .then(data => {
@@ -289,6 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
             })
     }
     testFunction()
+*/
 
 
     forms.forEach(item => {
@@ -302,6 +304,21 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         return await res.json()
     }
+    /*тест */
+    function postRender (response) {    /*обработка полученной карточки через post запрос*/
+        const {title, description, id} = response
+        const testCard = document.createElement('div')
+        testCard.classList.add('promotion__timer', 'card')
+
+        testCard.innerHTML = `
+        <div class="uk-card uk-card-primary uk-card-small uk-card-body">
+        <a href="#" id="${id}"></a>
+            <h3 class="uk-card-title">${title}</h3>
+            <p>${description}</p>
+            <span uk-icon="icon: close" class="uk-position-center-right cross"></span>
+        `
+        mainContainer.append(testCard)
+    }
 
     function bindPostData(form) {
         form.addEventListener('submit', event => {
@@ -312,16 +329,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
             postResource('http://localhost:3000/posts', json)
                 .then(data => {
-                    const items = Object.entries(data)
-                    const item = [items]
-                    console.log(item)
-                    renderCard(item)
+                    
+                    postRender(data)
+                    console.log(data)
+                })
+                .finally(() => {
+                    form.reset()
                 })
         })
     }
 
 
-    //таймер обартного отсчета
+    //таймер обартного отсчета, подготовка к обработке экстремальных задач
     /*let deadline = '2021-09-30'
 
     function getTimeRemaining (endtime) {

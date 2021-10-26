@@ -41,6 +41,8 @@
 }
 .uk-card {
     box-shadow: 0 0 2px #000;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 .ext-card {
     width: 50vw;
